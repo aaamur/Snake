@@ -10,16 +10,10 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point();
-            p1.x = 4;
-            p1.y = 5;
-            p1.sym = '*';
+            Point p1 = new Point(1,2,'*');
             p1.Draw();
 
-            Point p2 = new Point();
-            p2.x = 10;
-            p2.y = 11;
-            p2.sym = '#';
+            Point p2 = new Point(10,12,'#');
             p2.Draw();
 
             Console.ReadLine();
