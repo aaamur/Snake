@@ -21,6 +21,10 @@ namespace Snake
             downLine.Draw();
             leftLine.Draw();
             rightLine.Draw();
+
+            Point tail = new Point(4,5,'*');
+            Snake snake = new Snake(tail, 4, Direction.RIGTH);
+            snake.Draw();
                           
             Console.ReadLine();
         }
