@@ -27,10 +27,18 @@ namespace Snake
             Snake snake = new Snake(tail, 4, Direction.RIGTH);
             snake.Draw();
 
-            for (int i = 0; i < 10; i++)
+            while (true)
             {
+
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+                }
+
+                Thread.Sleep(200);
                 snake.move();
-                Thread.Sleep(300);
+               
             }
 
 
