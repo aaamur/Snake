@@ -36,6 +36,11 @@ namespace Snake
             Console.Write(this.sym);
         }
 
+        public bool isHit(Point p)
+        {
+            return this.x == p.x && this.y == p.y;
+        }
+
         public void Move(int offset, Direction direction)
         {
             switch (direction)
