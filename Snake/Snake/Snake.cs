@@ -34,6 +34,21 @@ namespace Snake
             head.Draw();
         }
 
+        public bool isHitTail()
+        {
+            Point head = pList.Last();
+
+            for (int i = 0; i < pList.Count - 1; i++)
+            {
+                if (head.isHit(pList[i]))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         private Point GetNextPoint()
         {
             Point head = pList.Last();
